@@ -29,6 +29,22 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+				<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<java-version>8</java-version>
+						<muleVersion>4.8-e-java8</muleVersion>
+						<username>${anypoint.username}</username>
+						<releaseChannel>Edge</releaseChannel>
+						<password>${anypoint.password}</password>
+						<applicationName>hello-world-poc</applicationName>
+						<environment>DEV-2</environment>
+						<workerType>MICRO</workerType>
+						<region>ca-central-1</region>
+						<workers>1</workers>
+						<objectStoreV2>false</objectStoreV2>
+					</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
